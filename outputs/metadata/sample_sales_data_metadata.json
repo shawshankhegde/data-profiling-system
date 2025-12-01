@@ -1,0 +1,368 @@
+{
+  "dataset_name": "sample_sales_data",
+  "extraction_timestamp": "2025-12-01T20:58:55.805066",
+  "schema": [
+    {
+      "column_name": "order_id",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": true,
+      "position": 1,
+      "python_type": "string",
+      "sql_type": "VARCHAR(6)",
+      "max_length": 6,
+      "business_name": "Order Number",
+      "business_definition": "Unique identifier for each sales transaction",
+      "data_owner": "Sales Operations Team",
+      "is_pii": false,
+      "related_terms": [
+        "transaction_id",
+        "order_number"
+      ]
+    },
+    {
+      "column_name": "customer_id",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 2,
+      "python_type": "string",
+      "sql_type": "VARCHAR(8)",
+      "max_length": 8,
+      "business_name": "Customer Identifier",
+      "business_definition": "Unique code assigned to each customer account",
+      "data_owner": "Customer Success Team",
+      "is_pii": false,
+      "related_terms": [
+        "account_id",
+        "client_id"
+      ]
+    },
+    {
+      "column_name": "customer_name",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 3,
+      "python_type": "string",
+      "sql_type": "VARCHAR(18)",
+      "max_length": 18,
+      "business_name": "Customer Name",
+      "business_definition": "Legal business name or individual name of the customer",
+      "data_owner": "Customer Success Team",
+      "is_pii": true,
+      "related_terms": []
+    },
+    {
+      "column_name": "product_id",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 4,
+      "python_type": "string",
+      "sql_type": "VARCHAR(7)",
+      "max_length": 7,
+      "business_name": "Product Code",
+      "business_definition": "Unique identifier for each product in the catalog",
+      "data_owner": "Product Management Team",
+      "is_pii": false,
+      "related_terms": [
+        "sku",
+        "item_number"
+      ]
+    },
+    {
+      "column_name": "product_name",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 5,
+      "python_type": "string",
+      "sql_type": "VARCHAR(13)",
+      "max_length": 13,
+      "business_name": "Product Name",
+      "business_definition": "Marketing name or title of the product",
+      "data_owner": "Product Management Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "category",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 6,
+      "python_type": "string",
+      "sql_type": "VARCHAR(11)",
+      "max_length": 11,
+      "business_name": "Product Category",
+      "business_definition": "High-level classification of products for inventory and reporting",
+      "data_owner": "Product Management Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "quantity",
+      "data_type": "int64",
+      "nullable": false,
+      "is_unique": false,
+      "position": 7,
+      "python_type": "numeric",
+      "sql_type": "SMALLINT",
+      "business_name": "Order Quantity",
+      "business_definition": "Number of units ordered in a single transaction",
+      "data_owner": "Sales Operations Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "unit_price",
+      "data_type": "float64",
+      "nullable": false,
+      "is_unique": false,
+      "position": 8,
+      "python_type": "numeric",
+      "sql_type": "DECIMAL(18,2)",
+      "business_name": "Unit Price",
+      "business_definition": "Price per single unit of the product at time of sale",
+      "data_owner": "Pricing Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "total_amount",
+      "data_type": "float64",
+      "nullable": false,
+      "is_unique": true,
+      "position": 9,
+      "python_type": "numeric",
+      "sql_type": "DECIMAL(18,2)",
+      "business_name": "Total Order Value",
+      "business_definition": "Total revenue from the order (quantity \u00d7 unit price)",
+      "data_owner": "Finance Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "order_date",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": true,
+      "position": 10,
+      "python_type": "string",
+      "sql_type": "VARCHAR(10)",
+      "max_length": 10,
+      "business_name": "Order Date",
+      "business_definition": "Date when the customer placed the order",
+      "data_owner": "Sales Operations Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "ship_date",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": true,
+      "position": 11,
+      "python_type": "string",
+      "sql_type": "VARCHAR(10)",
+      "max_length": 10,
+      "business_name": "Ship Date",
+      "business_definition": "Date when the order was shipped to the customer",
+      "data_owner": "Logistics Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "region",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 12,
+      "python_type": "string",
+      "sql_type": "VARCHAR(5)",
+      "max_length": 5,
+      "business_name": "Sales Region",
+      "business_definition": "Geographic territory where the sale occurred",
+      "data_owner": "Sales Operations Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "sales_rep",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 13,
+      "python_type": "string",
+      "sql_type": "VARCHAR(13)",
+      "max_length": 13,
+      "business_name": "Sales Representative",
+      "business_definition": "Name of the account executive responsible for the sale",
+      "data_owner": "Sales Operations Team",
+      "is_pii": true,
+      "related_terms": []
+    },
+    {
+      "column_name": "payment_method",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 14,
+      "python_type": "string",
+      "sql_type": "VARCHAR(11)",
+      "max_length": 11,
+      "business_name": "Payment Method",
+      "business_definition": "Method of payment used by the customer",
+      "data_owner": "Finance Team",
+      "is_pii": false,
+      "related_terms": []
+    },
+    {
+      "column_name": "customer_segment",
+      "data_type": "object",
+      "nullable": false,
+      "is_unique": false,
+      "position": 15,
+      "python_type": "string",
+      "sql_type": "VARCHAR(10)",
+      "max_length": 10,
+      "business_name": "Customer Segment",
+      "business_definition": "Business classification of the customer for targeting and analysis",
+      "data_owner": "Marketing Team",
+      "is_pii": false,
+      "related_terms": []
+    }
+  ],
+  "statistics": {
+    "row_count": 30,
+    "column_count": 15,
+    "total_cells": 450,
+    "memory_usage_bytes": 21704,
+    "column_statistics": {
+      "order_id": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 30
+      },
+      "customer_id": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 19
+      },
+      "customer_name": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 19
+      },
+      "product_id": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 8
+      },
+      "product_name": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 8
+      },
+      "category": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 4
+      },
+      "quantity": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 17,
+        "min": 1.0,
+        "max": 30.0,
+        "mean": 9.866666666666667,
+        "median": 7.0,
+        "std": 8.36550113235318
+      },
+      "unit_price": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 8,
+        "min": 79.99,
+        "max": 599.99,
+        "mean": 276.65666666666664,
+        "median": 249.99,
+        "std": 177.20693793013498
+      },
+      "total_amount": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 30,
+        "min": 299.99,
+        "max": 5999.9,
+        "mean": 1754.5679999999998,
+        "median": 1699.8400000000001,
+        "std": 1033.5117251771364
+      },
+      "order_date": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 30
+      },
+      "ship_date": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 30
+      },
+      "region": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 4
+      },
+      "sales_rep": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 4
+      },
+      "payment_method": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 2
+      },
+      "customer_segment": {
+        "count": 30,
+        "null_count": 0,
+        "unique_count": 4
+      }
+    }
+  },
+  "technical_metadata": {
+    "pandas_version": "2.3.3",
+    "index_type": "<class 'pandas.core.indexes.range.RangeIndex'>",
+    "index_name": null,
+    "has_duplicates": false,
+    "is_sorted": "ascending by order_id",
+    "encoding": "UTF-8"
+  },
+  "source_info": {
+    "system": "CSV File",
+    "table": "sample_sales_data",
+    "load_type": "full"
+  },
+  "lineage": {
+    "dataset": "sample_sales_data",
+    "upstream_sources": [
+      {
+        "source_system": "CSV File",
+        "source_table": "sample_sales_data",
+        "load_timestamp": "2025-12-01T20:58:55.813998",
+        "load_type": "full"
+      }
+    ],
+    "downstream_targets": [],
+    "transformations": []
+  },
+  "custom_attributes": {
+    "data_owner": null,
+    "data_steward": null,
+    "refresh_frequency": null,
+    "sensitivity_level": null,
+    "retention_policy": null
+  }
+}

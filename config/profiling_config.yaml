@@ -1,0 +1,74 @@
+# Data Profiling Configuration
+
+profiling:
+  # Enable/disable specific profiling features
+  statistical_analysis: true
+  data_quality_checks: true
+  pattern_detection: true
+  correlation_analysis: true
+  
+  # Thresholds for data quality
+  quality_thresholds:
+    max_null_percentage: 10  # Maximum acceptable null percentage
+    min_unique_values: 2     # Minimum unique values for categorization
+    max_cardinality: 1000    # Maximum cardinality for categorical variables
+    
+  # Output settings
+  output_formats:
+    - html
+    - json
+    - csv
+  
+  # Performance settings
+  sample_size: null  # null means use full dataset, otherwise specify row count
+  n_jobs: -1         # Number of parallel jobs (-1 uses all cores)
+
+metadata:
+  # Metadata extraction settings
+  include_system_metadata: true
+  include_lineage: true
+  include_statistics: true
+  
+  # Custom metadata fields to track
+  custom_fields:
+    - data_owner
+    - data_steward
+    - refresh_frequency
+    - sensitivity_level
+    - retention_policy
+
+glossary:
+  # Business glossary settings
+  auto_mapping: true
+  similarity_threshold: 0.8  # Threshold for automatic term matching
+  
+  # Sources for business terms
+  term_sources:
+    - config/business_terms.yaml
+    - external_glossary_api
+
+dictionary:
+  # Data dictionary generation settings
+  include_samples: true
+  sample_count: 5
+  include_statistics: true
+  include_quality_metrics: true
+  include_relationships: true
+  
+  # Template settings
+  template_format: html
+  include_visualizations: true
+
+alerts:
+  # Alert settings for data quality issues
+  enabled: true
+  channels:
+    - email
+    - slack
+  
+  # Conditions that trigger alerts
+  alert_conditions:
+    - null_percentage_exceeds_threshold
+    - data_type_changes
+    - cardinality_changes
+    - schema_changes

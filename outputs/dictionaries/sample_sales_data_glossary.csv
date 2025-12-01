@@ -1,0 +1,16 @@
+Technical Name,Business Name,Definition,Data Type,Owner,Is PII,Mapped
+order_id,Order Number,Unique identifier for each sales transaction,String,Sales Operations Team,False,True
+customer_id,Customer Identifier,Unique code assigned to each customer account,String,Customer Success Team,False,True
+customer_name,Customer Name,Legal business name or individual name of the customer,String,Customer Success Team,True,True
+product_id,Product Code,Unique identifier for each product in the catalog,String,Product Management Team,False,True
+product_name,Product Name,Marketing name or title of the product,String,Product Management Team,False,True
+category,Product Category,High-level classification of products for inventory and reporting,String,Product Management Team,False,True
+quantity,Order Quantity,Number of units ordered in a single transaction,Integer,Sales Operations Team,False,True
+unit_price,Unit Price,Price per single unit of the product at time of sale,Decimal,Pricing Team,False,True
+total_amount,Total Order Value,Total revenue from the order (quantity × unit price),Decimal,Finance Team,False,True
+order_date,Order Date,Date when the customer placed the order,Date,Sales Operations Team,False,True
+ship_date,Ship Date,Date when the order was shipped to the customer,Date,Logistics Team,False,True
+region,Sales Region,Geographic territory where the sale occurred,String,Sales Operations Team,False,True
+sales_rep,Sales Representative,Name of the account executive responsible for the sale,String,Sales Operations Team,True,True
+payment_method,Payment Method,Method of payment used by the customer,String,Finance Team,False,True
+customer_segment,Customer Segment,Business classification of the customer for targeting and analysis,String,Marketing Team,False,True

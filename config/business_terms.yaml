@@ -1,0 +1,211 @@
+# Business Glossary - Mapping Technical Terms to Business-Friendly Definitions
+
+terms:
+  order_id:
+    business_name: "Order Number"
+    definition: "Unique identifier for each sales transaction"
+    data_type: "String"
+    format: "ORD followed by 3 digits"
+    examples:
+      - "ORD001"
+      - "ORD002"
+    owner: "Sales Operations Team"
+    related_terms:
+      - "transaction_id"
+      - "order_number"
+    
+  customer_id:
+    business_name: "Customer Identifier"
+    definition: "Unique code assigned to each customer account"
+    data_type: "String"
+    format: "CUST followed by 4 digits"
+    examples:
+      - "CUST1001"
+      - "CUST1002"
+    owner: "Customer Success Team"
+    related_terms:
+      - "account_id"
+      - "client_id"
+  
+  customer_name:
+    business_name: "Customer Name"
+    definition: "Legal business name or individual name of the customer"
+    data_type: "String"
+    format: "Free text"
+    examples:
+      - "Acme Corporation"
+      - "Global Industries"
+    owner: "Customer Success Team"
+    pii: true
+    
+  product_id:
+    business_name: "Product Code"
+    definition: "Unique identifier for each product in the catalog"
+    data_type: "String"
+    format: "PROD followed by 3 digits"
+    examples:
+      - "PROD101"
+      - "PROD102"
+    owner: "Product Management Team"
+    related_terms:
+      - "sku"
+      - "item_number"
+  
+  product_name:
+    business_name: "Product Name"
+    definition: "Marketing name or title of the product"
+    data_type: "String"
+    format: "Free text"
+    examples:
+      - "Widget A"
+      - "Gadget X"
+    owner: "Product Management Team"
+    
+  category:
+    business_name: "Product Category"
+    definition: "High-level classification of products for inventory and reporting"
+    data_type: "String"
+    format: "Categorical"
+    valid_values:
+      - "Electronics"
+      - "Technology"
+      - "Industrial"
+      - "Consumer"
+    owner: "Product Management Team"
+    
+  quantity:
+    business_name: "Order Quantity"
+    definition: "Number of units ordered in a single transaction"
+    data_type: "Integer"
+    unit: "Units"
+    examples:
+      - 5
+      - 10
+    owner: "Sales Operations Team"
+    
+  unit_price:
+    business_name: "Unit Price"
+    definition: "Price per single unit of the product at time of sale"
+    data_type: "Decimal"
+    currency: "USD"
+    format: "999.99"
+    examples:
+      - 299.99
+      - 149.99
+    owner: "Pricing Team"
+    
+  total_amount:
+    business_name: "Total Order Value"
+    definition: "Total revenue from the order (quantity × unit price)"
+    data_type: "Decimal"
+    currency: "USD"
+    calculation: "quantity * unit_price"
+    examples:
+      - 1499.95
+      - 749.95
+    owner: "Finance Team"
+    
+  order_date:
+    business_name: "Order Date"
+    definition: "Date when the customer placed the order"
+    data_type: "Date"
+    format: "YYYY-MM-DD"
+    examples:
+      - "2024-01-15"
+      - "2024-02-01"
+    owner: "Sales Operations Team"
+    
+  ship_date:
+    business_name: "Ship Date"
+    definition: "Date when the order was shipped to the customer"
+    data_type: "Date"
+    format: "YYYY-MM-DD"
+    examples:
+      - "2024-01-17"
+      - "2024-02-03"
+    owner: "Logistics Team"
+    related_metrics:
+      - "fulfillment_time"
+      - "delivery_performance"
+  
+  region:
+    business_name: "Sales Region"
+    definition: "Geographic territory where the sale occurred"
+    data_type: "String"
+    format: "Categorical"
+    valid_values:
+      - "North"
+      - "South"
+      - "East"
+      - "West"
+    owner: "Sales Operations Team"
+    
+  sales_rep:
+    business_name: "Sales Representative"
+    definition: "Name of the account executive responsible for the sale"
+    data_type: "String"
+    format: "First Last"
+    examples:
+      - "John Smith"
+      - "Sarah Johnson"
+    owner: "Sales Operations Team"
+    pii: true
+    
+  payment_method:
+    business_name: "Payment Method"
+    definition: "Method of payment used by the customer"
+    data_type: "String"
+    format: "Categorical"
+    valid_values:
+      - "Credit Card"
+      - "Invoice"
+      - "Wire Transfer"
+      - "PayPal"
+    owner: "Finance Team"
+    
+  customer_segment:
+    business_name: "Customer Segment"
+    definition: "Business classification of the customer for targeting and analysis"
+    data_type: "String"
+    format: "Categorical"
+    valid_values:
+      - "Enterprise"
+      - "SMB"
+      - "Startup"
+      - "Retail"
+    owner: "Marketing Team"
+    usage:
+      - "Customer segmentation analysis"
+      - "Marketing campaign targeting"
+      - "Revenue forecasting"
+
+# Common data patterns
+patterns:
+  order_id_pattern: "^ORD\\d{3}$"
+  customer_id_pattern: "^CUST\\d{4}$"
+  product_id_pattern: "^PROD\\d{3}$"
+  email_pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+  phone_pattern: "^\\+?1?\\d{9,15}$"
+  date_pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+
+# Data quality rules
+quality_rules:
+  order_id:
+    - not_null
+    - unique
+    - matches_pattern
+  customer_id:
+    - not_null
+    - matches_pattern
+  total_amount:
+    - not_null
+    - greater_than_zero
+    - equals_calculated: "quantity * unit_price"
+  order_date:
+    - not_null
+    - valid_date
+    - not_future_date
+  ship_date:
+    - not_null
+    - valid_date
+    - after_order_date

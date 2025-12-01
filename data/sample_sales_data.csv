@@ -1,0 +1,31 @@
+order_id,customer_id,customer_name,product_id,product_name,category,quantity,unit_price,total_amount,order_date,ship_date,region,sales_rep,payment_method,customer_segment
+ORD001,CUST1001,Acme Corporation,PROD101,Widget A,Electronics,5,299.99,1499.95,2024-01-15,2024-01-17,North,John Smith,Credit Card,Enterprise
+ORD002,CUST1002,Global Industries,PROD102,Widget B,Electronics,3,399.99,1199.97,2024-01-16,2024-01-18,South,Sarah Johnson,Invoice,Enterprise
+ORD003,CUST1003,Tech Solutions Inc,PROD103,Gadget X,Technology,10,149.99,1499.90,2024-01-17,2024-01-19,East,Mike Davis,Credit Card,SMB
+ORD004,CUST1001,Acme Corporation,PROD104,Tool Pro,Industrial,2,599.99,1199.98,2024-01-18,2024-01-20,North,John Smith,Invoice,Enterprise
+ORD005,CUST1004,Startup Ventures,PROD101,Widget A,Electronics,1,299.99,299.99,2024-01-19,2024-01-21,West,Emily Brown,Credit Card,Startup
+ORD006,CUST1005,MegaCorp LLC,PROD105,Device Z,Electronics,8,249.99,1999.92,2024-01-20,2024-01-22,North,John Smith,Credit Card,Enterprise
+ORD007,CUST1002,Global Industries,PROD103,Gadget X,Technology,5,149.99,749.95,2024-01-21,2024-01-23,South,Sarah Johnson,Invoice,Enterprise
+ORD008,CUST1006,Small Business Co,PROD102,Widget B,Electronics,2,399.99,799.98,2024-01-22,2024-01-24,East,Mike Davis,Credit Card,SMB
+ORD009,CUST1007,Enterprise Group,PROD106,Component Y,Industrial,15,99.99,1499.85,2024-01-23,2024-01-25,West,Emily Brown,Invoice,Enterprise
+ORD010,CUST1003,Tech Solutions Inc,PROD104,Tool Pro,Industrial,4,599.99,2399.96,2024-01-24,2024-01-26,East,Mike Davis,Credit Card,SMB
+ORD011,CUST1008,Innovation Labs,PROD101,Widget A,Electronics,7,299.99,2099.93,2024-01-25,2024-01-27,North,John Smith,Credit Card,Startup
+ORD012,CUST1009,Retail Chain,PROD107,Product Alpha,Consumer,20,79.99,1599.80,2024-01-26,2024-01-28,South,Sarah Johnson,Invoice,Retail
+ORD013,CUST1010,Digital Dynamics,PROD103,Gadget X,Technology,12,149.99,1799.88,2024-01-27,2024-01-29,West,Emily Brown,Credit Card,SMB
+ORD014,CUST1005,MegaCorp LLC,PROD108,Service Pack,Technology,6,449.99,2699.94,2024-01-28,2024-01-30,North,John Smith,Invoice,Enterprise
+ORD015,CUST1011,Local Store,PROD107,Product Alpha,Consumer,25,79.99,1999.75,2024-01-29,2024-01-31,East,Mike Davis,Credit Card,Retail
+ORD016,CUST1004,Startup Ventures,PROD105,Device Z,Electronics,3,249.99,749.97,2024-01-30,2024-02-01,West,Emily Brown,Credit Card,Startup
+ORD017,CUST1012,Manufacturing Inc,PROD106,Component Y,Industrial,30,99.99,2999.70,2024-01-31,2024-02-02,South,Sarah Johnson,Invoice,Enterprise
+ORD018,CUST1013,Tech Startup,PROD102,Widget B,Electronics,1,399.99,399.99,2024-02-01,2024-02-03,North,John Smith,Credit Card,Startup
+ORD019,CUST1006,Small Business Co,PROD104,Tool Pro,Industrial,3,599.99,1799.97,2024-02-02,2024-02-04,East,Mike Davis,Invoice,SMB
+ORD020,CUST1014,Consumer Direct,PROD107,Product Alpha,Consumer,15,79.99,1199.85,2024-02-03,2024-02-05,West,Emily Brown,Credit Card,Retail
+ORD021,CUST1001,Acme Corporation,PROD103,Gadget X,Technology,8,149.99,1199.92,2024-02-04,2024-02-06,North,John Smith,Invoice,Enterprise
+ORD022,CUST1015,Partner Solutions,PROD108,Service Pack,Technology,4,449.99,1799.96,2024-02-05,2024-02-07,South,Sarah Johnson,Credit Card,Enterprise
+ORD023,CUST1007,Enterprise Group,PROD101,Widget A,Electronics,6,299.99,1799.94,2024-02-06,2024-02-08,West,Emily Brown,Invoice,Enterprise
+ORD024,CUST1016,Quick Shop,PROD107,Product Alpha,Consumer,18,79.99,1439.82,2024-02-07,2024-02-09,East,Mike Davis,Credit Card,Retail
+ORD025,CUST1010,Digital Dynamics,PROD105,Device Z,Electronics,9,249.99,2249.91,2024-02-08,2024-02-10,West,Emily Brown,Credit Card,SMB
+ORD026,CUST1017,Growth Corp,PROD102,Widget B,Electronics,5,399.99,1999.95,2024-02-09,2024-02-11,North,John Smith,Invoice,SMB
+ORD027,CUST1009,Retail Chain,PROD106,Component Y,Industrial,22,99.99,2199.78,2024-02-10,2024-02-12,South,Sarah Johnson,Invoice,Retail
+ORD028,CUST1018,New Ventures,PROD103,Gadget X,Technology,7,149.99,1049.93,2024-02-11,2024-02-13,East,Mike Davis,Credit Card,Startup
+ORD029,CUST1012,Manufacturing Inc,PROD104,Tool Pro,Industrial,10,599.99,5999.90,2024-02-12,2024-02-14,South,Sarah Johnson,Invoice,Enterprise
+ORD030,CUST1019,Alpha Retail,PROD107,Product Alpha,Consumer,30,79.99,2399.70,2024-02-13,2024-02-15,West,Emily Brown,Credit Card,Retail

@@ -1,0 +1,640 @@
+{
+  "dataset_name": "sample_sales_data",
+  "generation_date": "2025-12-01T20:58:55.838327",
+  "overview": {
+    "description": "Dataset containing 30 records across 15 fields",
+    "record_count": 30,
+    "field_count": 15,
+    "size_mb": "0.02 MB",
+    "last_updated": "2025-12-01",
+    "refresh_frequency": "Daily"
+  },
+  "columns": [
+    {
+      "technical_name": "order_id",
+      "business_name": "Order Number",
+      "position": 1,
+      "description": "Unique identifier for each sales transaction",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(6)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": true,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 30,
+        "unique_percentage": "100.00%"
+      },
+      "top_values": {
+        "ORD001": 1,
+        "ORD002": 1,
+        "ORD003": 1,
+        "ORD004": 1,
+        "ORD005": 1,
+        "ORD006": 1,
+        "ORD007": 1,
+        "ORD008": 1,
+        "ORD009": 1,
+        "ORD010": 1
+      },
+      "sample_values": [
+        "ORD001",
+        "ORD002",
+        "ORD003",
+        "ORD004",
+        "ORD005"
+      ],
+      "owner": "Sales Operations Team",
+      "business_examples": [
+        "ORD001",
+        "ORD002"
+      ],
+      "related_fields": [
+        "transaction_id",
+        "order_number"
+      ]
+    },
+    {
+      "technical_name": "customer_id",
+      "business_name": "Customer Identifier",
+      "position": 2,
+      "description": "Unique code assigned to each customer account",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(8)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 19,
+        "unique_percentage": "63.33%"
+      },
+      "top_values": {
+        "CUST1001": 3,
+        "CUST1002": 2,
+        "CUST1003": 2,
+        "CUST1004": 2,
+        "CUST1005": 2,
+        "CUST1006": 2,
+        "CUST1007": 2,
+        "CUST1009": 2,
+        "CUST1010": 2,
+        "CUST1012": 2
+      },
+      "sample_values": [
+        "CUST1001",
+        "CUST1002",
+        "CUST1003",
+        "CUST1001",
+        "CUST1004"
+      ],
+      "owner": "Customer Success Team",
+      "business_examples": [
+        "CUST1001",
+        "CUST1002"
+      ],
+      "related_fields": [
+        "account_id",
+        "client_id"
+      ]
+    },
+    {
+      "technical_name": "customer_name",
+      "business_name": "Customer Name",
+      "position": 3,
+      "description": "Legal business name or individual name of the customer",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(18)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 19,
+        "unique_percentage": "63.33%"
+      },
+      "top_values": {
+        "Acme Corporation": 3,
+        "Global Industries": 2,
+        "Tech Solutions Inc": 2,
+        "Startup Ventures": 2,
+        "MegaCorp LLC": 2,
+        "Small Business Co": 2,
+        "Enterprise Group": 2,
+        "Retail Chain": 2,
+        "Digital Dynamics": 2,
+        "Manufacturing Inc": 2
+      },
+      "sample_values": [
+        "Acme Corporation",
+        "Global Industries",
+        "Tech Solutions Inc",
+        "Acme Corporation",
+        "Startup Ventures"
+      ],
+      "owner": "Customer Success Team",
+      "is_pii": true,
+      "sensitivity": "HIGH",
+      "business_examples": [
+        "Acme Corporation",
+        "Global Industries"
+      ]
+    },
+    {
+      "technical_name": "product_id",
+      "business_name": "Product Code",
+      "position": 4,
+      "description": "Unique identifier for each product in the catalog",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(7)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 8,
+        "unique_percentage": "26.67%"
+      },
+      "top_values": {
+        "PROD103": 5,
+        "PROD107": 5,
+        "PROD102": 4,
+        "PROD101": 4,
+        "PROD104": 4,
+        "PROD105": 3,
+        "PROD106": 3,
+        "PROD108": 2
+      },
+      "sample_values": [
+        "PROD101",
+        "PROD102",
+        "PROD103",
+        "PROD104",
+        "PROD101"
+      ],
+      "owner": "Product Management Team",
+      "business_examples": [
+        "PROD101",
+        "PROD102"
+      ],
+      "related_fields": [
+        "sku",
+        "item_number"
+      ]
+    },
+    {
+      "technical_name": "product_name",
+      "business_name": "Product Name",
+      "position": 5,
+      "description": "Marketing name or title of the product",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(13)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 8,
+        "unique_percentage": "26.67%"
+      },
+      "top_values": {
+        "Gadget X": 5,
+        "Product Alpha": 5,
+        "Widget B": 4,
+        "Widget A": 4,
+        "Tool Pro": 4,
+        "Device Z": 3,
+        "Component Y": 3,
+        "Service Pack": 2
+      },
+      "sample_values": [
+        "Widget A",
+        "Widget B",
+        "Gadget X",
+        "Tool Pro",
+        "Widget A"
+      ],
+      "owner": "Product Management Team",
+      "business_examples": [
+        "Widget A",
+        "Gadget X"
+      ]
+    },
+    {
+      "technical_name": "category",
+      "business_name": "Product Category",
+      "position": 6,
+      "description": "High-level classification of products for inventory and reporting",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(11)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 4,
+        "unique_percentage": "13.33%"
+      },
+      "top_values": {
+        "Electronics": 11,
+        "Technology": 7,
+        "Industrial": 7,
+        "Consumer": 5
+      },
+      "sample_values": [
+        "Electronics",
+        "Electronics",
+        "Technology",
+        "Industrial",
+        "Electronics"
+      ],
+      "owner": "Product Management Team",
+      "valid_values": [
+        "Electronics",
+        "Technology",
+        "Industrial",
+        "Consumer"
+      ]
+    },
+    {
+      "technical_name": "quantity",
+      "business_name": "Order Quantity",
+      "position": 7,
+      "description": "Number of units ordered in a single transaction",
+      "data_type": {
+        "pandas": "int64",
+        "sql": "SMALLINT",
+        "python": "numeric"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 17,
+        "unique_percentage": "56.67%",
+        "min": 1.0,
+        "max": 30.0,
+        "mean": 9.866666666666667,
+        "median": 7.0
+      },
+      "sample_values": [
+        "5",
+        "3",
+        "10",
+        "2",
+        "1"
+      ],
+      "owner": "Sales Operations Team",
+      "business_examples": [
+        5,
+        10
+      ]
+    },
+    {
+      "technical_name": "unit_price",
+      "business_name": "Unit Price",
+      "position": 8,
+      "description": "Price per single unit of the product at time of sale",
+      "data_type": {
+        "pandas": "float64",
+        "sql": "DECIMAL(18,2)",
+        "python": "numeric"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 8,
+        "unique_percentage": "26.67%",
+        "min": 79.99,
+        "max": 599.99,
+        "mean": 276.65666666666664,
+        "median": 249.99
+      },
+      "sample_values": [
+        "299.99",
+        "399.99",
+        "149.99",
+        "599.99",
+        "299.99"
+      ],
+      "owner": "Pricing Team",
+      "business_examples": [
+        299.99,
+        149.99
+      ]
+    },
+    {
+      "technical_name": "total_amount",
+      "business_name": "Total Order Value",
+      "position": 9,
+      "description": "Total revenue from the order (quantity \u00d7 unit price)",
+      "data_type": {
+        "pandas": "float64",
+        "sql": "DECIMAL(18,2)",
+        "python": "numeric"
+      },
+      "nullable": false,
+      "is_unique": true,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 30,
+        "unique_percentage": "100.00%",
+        "min": 299.99,
+        "max": 5999.9,
+        "mean": 1754.5679999999998,
+        "median": 1699.8400000000001
+      },
+      "sample_values": [
+        "1499.95",
+        "1199.97",
+        "1499.9",
+        "1199.98",
+        "299.99"
+      ],
+      "owner": "Finance Team",
+      "business_examples": [
+        1499.95,
+        749.95
+      ]
+    },
+    {
+      "technical_name": "order_date",
+      "business_name": "Order Date",
+      "position": 10,
+      "description": "Date when the customer placed the order",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(10)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": true,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 30,
+        "unique_percentage": "100.00%"
+      },
+      "top_values": {
+        "2024-01-15": 1,
+        "2024-01-16": 1,
+        "2024-01-17": 1,
+        "2024-01-18": 1,
+        "2024-01-19": 1,
+        "2024-01-20": 1,
+        "2024-01-21": 1,
+        "2024-01-22": 1,
+        "2024-01-23": 1,
+        "2024-01-24": 1
+      },
+      "sample_values": [
+        "2024-01-15",
+        "2024-01-16",
+        "2024-01-17",
+        "2024-01-18",
+        "2024-01-19"
+      ],
+      "owner": "Sales Operations Team",
+      "business_examples": [
+        "2024-01-15",
+        "2024-02-01"
+      ]
+    },
+    {
+      "technical_name": "ship_date",
+      "business_name": "Ship Date",
+      "position": 11,
+      "description": "Date when the order was shipped to the customer",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(10)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": true,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 30,
+        "unique_percentage": "100.00%"
+      },
+      "top_values": {
+        "2024-01-17": 1,
+        "2024-01-18": 1,
+        "2024-01-19": 1,
+        "2024-01-20": 1,
+        "2024-01-21": 1,
+        "2024-01-22": 1,
+        "2024-01-23": 1,
+        "2024-01-24": 1,
+        "2024-01-25": 1,
+        "2024-01-26": 1
+      },
+      "sample_values": [
+        "2024-01-17",
+        "2024-01-18",
+        "2024-01-19",
+        "2024-01-20",
+        "2024-01-21"
+      ],
+      "owner": "Logistics Team",
+      "business_examples": [
+        "2024-01-17",
+        "2024-02-03"
+      ]
+    },
+    {
+      "technical_name": "region",
+      "business_name": "Sales Region",
+      "position": 12,
+      "description": "Geographic territory where the sale occurred",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(5)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 4,
+        "unique_percentage": "13.33%"
+      },
+      "top_values": {
+        "North": 8,
+        "West": 8,
+        "South": 7,
+        "East": 7
+      },
+      "sample_values": [
+        "North",
+        "South",
+        "East",
+        "North",
+        "West"
+      ],
+      "owner": "Sales Operations Team",
+      "valid_values": [
+        "North",
+        "South",
+        "East",
+        "West"
+      ]
+    },
+    {
+      "technical_name": "sales_rep",
+      "business_name": "Sales Representative",
+      "position": 13,
+      "description": "Name of the account executive responsible for the sale",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(13)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 4,
+        "unique_percentage": "13.33%"
+      },
+      "top_values": {
+        "John Smith": 8,
+        "Emily Brown": 8,
+        "Sarah Johnson": 7,
+        "Mike Davis": 7
+      },
+      "sample_values": [
+        "John Smith",
+        "Sarah Johnson",
+        "Mike Davis",
+        "John Smith",
+        "Emily Brown"
+      ],
+      "owner": "Sales Operations Team",
+      "is_pii": true,
+      "sensitivity": "HIGH",
+      "business_examples": [
+        "John Smith",
+        "Sarah Johnson"
+      ]
+    },
+    {
+      "technical_name": "payment_method",
+      "business_name": "Payment Method",
+      "position": 14,
+      "description": "Method of payment used by the customer",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(11)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 2,
+        "unique_percentage": "6.67%"
+      },
+      "top_values": {
+        "Credit Card": 17,
+        "Invoice": 13
+      },
+      "sample_values": [
+        "Credit Card",
+        "Invoice",
+        "Credit Card",
+        "Invoice",
+        "Credit Card"
+      ],
+      "owner": "Finance Team",
+      "valid_values": [
+        "Credit Card",
+        "Invoice",
+        "Wire Transfer",
+        "PayPal"
+      ]
+    },
+    {
+      "technical_name": "customer_segment",
+      "business_name": "Customer Segment",
+      "position": 15,
+      "description": "Business classification of the customer for targeting and analysis",
+      "data_type": {
+        "pandas": "object",
+        "sql": "VARCHAR(10)",
+        "python": "string"
+      },
+      "nullable": false,
+      "is_unique": false,
+      "statistics": {
+        "null_count": 0,
+        "null_percentage": "0.00%",
+        "unique_count": 4,
+        "unique_percentage": "13.33%"
+      },
+      "top_values": {
+        "Enterprise": 12,
+        "SMB": 7,
+        "Retail": 6,
+        "Startup": 5
+      },
+      "sample_values": [
+        "Enterprise",
+        "Enterprise",
+        "SMB",
+        "Enterprise",
+        "Startup"
+      ],
+      "owner": "Marketing Team",
+      "valid_values": [
+        "Enterprise",
+        "SMB",
+        "Startup",
+        "Retail"
+      ]
+    }
+  ],
+  "data_quality": {
+    "overall_completeness": "100.00%",
+    "duplicate_records": 0,
+    "quality_issues": [],
+    "quality_score": "100% (Excellent)"
+  },
+  "usage_notes": {
+    "primary_keys": [],
+    "foreign_keys": [],
+    "recommended_joins": [],
+    "common_queries": [],
+    "notes": [
+      "Review data quality issues before using in production",
+      "Verify PII handling complies with privacy policies",
+      "Contact data owner for questions about business logic"
+    ]
+  }
+}

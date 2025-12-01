@@ -1,0 +1,280 @@
+{
+  "dataset_name": "sample_sales_data",
+  "total_columns": 15,
+  "mapped_columns": 15,
+  "unmapped_columns": 0,
+  "terms": {
+    "order_id": {
+      "technical_name": "order_id",
+      "business_name": "Order Number",
+      "definition": "Unique identifier for each sales transaction",
+      "data_type": "String",
+      "format": "ORD followed by 3 digits",
+      "examples": [
+        "ORD001",
+        "ORD002"
+      ],
+      "owner": "Sales Operations Team",
+      "related_terms": [
+        "transaction_id",
+        "order_number"
+      ],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "customer_id": {
+      "technical_name": "customer_id",
+      "business_name": "Customer Identifier",
+      "definition": "Unique code assigned to each customer account",
+      "data_type": "String",
+      "format": "CUST followed by 4 digits",
+      "examples": [
+        "CUST1001",
+        "CUST1002"
+      ],
+      "owner": "Customer Success Team",
+      "related_terms": [
+        "account_id",
+        "client_id"
+      ],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "customer_name": {
+      "technical_name": "customer_name",
+      "business_name": "Customer Name",
+      "definition": "Legal business name or individual name of the customer",
+      "data_type": "String",
+      "format": "Free text",
+      "examples": [
+        "Acme Corporation",
+        "Global Industries"
+      ],
+      "owner": "Customer Success Team",
+      "related_terms": [],
+      "is_pii": true,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "product_id": {
+      "technical_name": "product_id",
+      "business_name": "Product Code",
+      "definition": "Unique identifier for each product in the catalog",
+      "data_type": "String",
+      "format": "PROD followed by 3 digits",
+      "examples": [
+        "PROD101",
+        "PROD102"
+      ],
+      "owner": "Product Management Team",
+      "related_terms": [
+        "sku",
+        "item_number"
+      ],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "product_name": {
+      "technical_name": "product_name",
+      "business_name": "Product Name",
+      "definition": "Marketing name or title of the product",
+      "data_type": "String",
+      "format": "Free text",
+      "examples": [
+        "Widget A",
+        "Gadget X"
+      ],
+      "owner": "Product Management Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "category": {
+      "technical_name": "category",
+      "business_name": "Product Category",
+      "definition": "High-level classification of products for inventory and reporting",
+      "data_type": "String",
+      "format": "Categorical",
+      "examples": [],
+      "owner": "Product Management Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [
+        "Electronics",
+        "Technology",
+        "Industrial",
+        "Consumer"
+      ],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "quantity": {
+      "technical_name": "quantity",
+      "business_name": "Order Quantity",
+      "definition": "Number of units ordered in a single transaction",
+      "data_type": "Integer",
+      "format": "",
+      "examples": [
+        5,
+        10
+      ],
+      "owner": "Sales Operations Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "unit_price": {
+      "technical_name": "unit_price",
+      "business_name": "Unit Price",
+      "definition": "Price per single unit of the product at time of sale",
+      "data_type": "Decimal",
+      "format": "999.99",
+      "examples": [
+        299.99,
+        149.99
+      ],
+      "owner": "Pricing Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "total_amount": {
+      "technical_name": "total_amount",
+      "business_name": "Total Order Value",
+      "definition": "Total revenue from the order (quantity \u00d7 unit price)",
+      "data_type": "Decimal",
+      "format": "",
+      "examples": [
+        1499.95,
+        749.95
+      ],
+      "owner": "Finance Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "order_date": {
+      "technical_name": "order_date",
+      "business_name": "Order Date",
+      "definition": "Date when the customer placed the order",
+      "data_type": "Date",
+      "format": "YYYY-MM-DD",
+      "examples": [
+        "2024-01-15",
+        "2024-02-01"
+      ],
+      "owner": "Sales Operations Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "ship_date": {
+      "technical_name": "ship_date",
+      "business_name": "Ship Date",
+      "definition": "Date when the order was shipped to the customer",
+      "data_type": "Date",
+      "format": "YYYY-MM-DD",
+      "examples": [
+        "2024-01-17",
+        "2024-02-03"
+      ],
+      "owner": "Logistics Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "region": {
+      "technical_name": "region",
+      "business_name": "Sales Region",
+      "definition": "Geographic territory where the sale occurred",
+      "data_type": "String",
+      "format": "Categorical",
+      "examples": [],
+      "owner": "Sales Operations Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [
+        "North",
+        "South",
+        "East",
+        "West"
+      ],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "sales_rep": {
+      "technical_name": "sales_rep",
+      "business_name": "Sales Representative",
+      "definition": "Name of the account executive responsible for the sale",
+      "data_type": "String",
+      "format": "First Last",
+      "examples": [
+        "John Smith",
+        "Sarah Johnson"
+      ],
+      "owner": "Sales Operations Team",
+      "related_terms": [],
+      "is_pii": true,
+      "valid_values": [],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "payment_method": {
+      "technical_name": "payment_method",
+      "business_name": "Payment Method",
+      "definition": "Method of payment used by the customer",
+      "data_type": "String",
+      "format": "Categorical",
+      "examples": [],
+      "owner": "Finance Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [
+        "Credit Card",
+        "Invoice",
+        "Wire Transfer",
+        "PayPal"
+      ],
+      "match_type": "exact",
+      "mapped": true
+    },
+    "customer_segment": {
+      "technical_name": "customer_segment",
+      "business_name": "Customer Segment",
+      "definition": "Business classification of the customer for targeting and analysis",
+      "data_type": "String",
+      "format": "Categorical",
+      "examples": [],
+      "owner": "Marketing Team",
+      "related_terms": [],
+      "is_pii": false,
+      "valid_values": [
+        "Enterprise",
+        "SMB",
+        "Startup",
+        "Retail"
+      ],
+      "match_type": "exact",
+      "mapped": true
+    }
+  }
+}

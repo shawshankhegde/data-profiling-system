@@ -1,0 +1,433 @@
+{
+  "dataset_name": "sample_sales_data",
+  "timestamp": "2025-12-01T20:58:55.772775",
+  "basic_info": {
+    "row_count": 30,
+    "column_count": 15,
+    "memory_usage_mb": 0.02069854736328125,
+    "duplicate_rows": 0,
+    "columns": [
+      "order_id",
+      "customer_id",
+      "customer_name",
+      "product_id",
+      "product_name",
+      "category",
+      "quantity",
+      "unit_price",
+      "total_amount",
+      "order_date",
+      "ship_date",
+      "region",
+      "sales_rep",
+      "payment_method",
+      "customer_segment"
+    ],
+    "dtypes": {
+      "order_id": "object",
+      "customer_id": "object",
+      "customer_name": "object",
+      "product_id": "object",
+      "product_name": "object",
+      "category": "object",
+      "quantity": "int64",
+      "unit_price": "float64",
+      "total_amount": "float64",
+      "order_date": "object",
+      "ship_date": "object",
+      "region": "object",
+      "sales_rep": "object",
+      "payment_method": "object",
+      "customer_segment": "object"
+    }
+  },
+  "column_profiles": {
+    "order_id": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 30,
+      "unique_percentage": 100.0,
+      "top_values": {
+        "ORD001": 1,
+        "ORD002": 1,
+        "ORD003": 1,
+        "ORD004": 1,
+        "ORD005": 1,
+        "ORD006": 1,
+        "ORD007": 1,
+        "ORD008": 1,
+        "ORD009": 1,
+        "ORD010": 1
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "ORD001",
+        "ORD002",
+        "ORD003",
+        "ORD004",
+        "ORD005"
+      ]
+    },
+    "customer_id": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 19,
+      "unique_percentage": 63.33333333333333,
+      "top_values": {
+        "CUST1001": 3,
+        "CUST1002": 2,
+        "CUST1003": 2,
+        "CUST1004": 2,
+        "CUST1005": 2,
+        "CUST1006": 2,
+        "CUST1007": 2,
+        "CUST1009": 2,
+        "CUST1010": 2,
+        "CUST1012": 2
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "CUST1001",
+        "CUST1002",
+        "CUST1003",
+        "CUST1001",
+        "CUST1004"
+      ]
+    },
+    "customer_name": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 19,
+      "unique_percentage": 63.33333333333333,
+      "top_values": {
+        "Acme Corporation": 3,
+        "Global Industries": 2,
+        "Tech Solutions Inc": 2,
+        "Startup Ventures": 2,
+        "MegaCorp LLC": 2,
+        "Small Business Co": 2,
+        "Enterprise Group": 2,
+        "Retail Chain": 2,
+        "Digital Dynamics": 2,
+        "Manufacturing Inc": 2
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "Acme Corporation",
+        "Global Industries",
+        "Tech Solutions Inc",
+        "Acme Corporation",
+        "Startup Ventures"
+      ]
+    },
+    "product_id": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 8,
+      "unique_percentage": 26.666666666666668,
+      "top_values": {
+        "PROD103": 5,
+        "PROD107": 5,
+        "PROD102": 4,
+        "PROD101": 4,
+        "PROD104": 4,
+        "PROD105": 3,
+        "PROD106": 3,
+        "PROD108": 2
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "PROD101",
+        "PROD102",
+        "PROD103",
+        "PROD104",
+        "PROD101"
+      ]
+    },
+    "product_name": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 8,
+      "unique_percentage": 26.666666666666668,
+      "top_values": {
+        "Gadget X": 5,
+        "Product Alpha": 5,
+        "Widget B": 4,
+        "Widget A": 4,
+        "Tool Pro": 4,
+        "Device Z": 3,
+        "Component Y": 3,
+        "Service Pack": 2
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "Widget A",
+        "Widget B",
+        "Gadget X",
+        "Tool Pro",
+        "Widget A"
+      ]
+    },
+    "category": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "unique_percentage": 13.333333333333334,
+      "top_values": {
+        "Electronics": 11,
+        "Technology": 7,
+        "Industrial": 7,
+        "Consumer": 5
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "Electronics",
+        "Electronics",
+        "Technology",
+        "Industrial",
+        "Electronics"
+      ]
+    },
+    "quantity": {
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 17,
+      "unique_percentage": 56.666666666666664,
+      "min": 1.0,
+      "max": 30.0,
+      "mean": 9.866666666666667,
+      "median": 7.0,
+      "std": 8.36550113235318,
+      "zeros_count": 0,
+      "sample_values": [
+        "5",
+        "3",
+        "10",
+        "2",
+        "1"
+      ]
+    },
+    "unit_price": {
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 8,
+      "unique_percentage": 26.666666666666668,
+      "min": 79.99,
+      "max": 599.99,
+      "mean": 276.65666666666664,
+      "median": 249.99,
+      "std": 177.20693793013498,
+      "zeros_count": 0,
+      "sample_values": [
+        "299.99",
+        "399.99",
+        "149.99",
+        "599.99",
+        "299.99"
+      ]
+    },
+    "total_amount": {
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 30,
+      "unique_percentage": 100.0,
+      "min": 299.99,
+      "max": 5999.9,
+      "mean": 1754.5679999999998,
+      "median": 1699.8400000000001,
+      "std": 1033.5117251771364,
+      "zeros_count": 0,
+      "sample_values": [
+        "1499.95",
+        "1199.97",
+        "1499.9",
+        "1199.98",
+        "299.99"
+      ]
+    },
+    "order_date": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 30,
+      "unique_percentage": 100.0,
+      "top_values": {
+        "2024-01-15": 1,
+        "2024-01-16": 1,
+        "2024-01-17": 1,
+        "2024-01-18": 1,
+        "2024-01-19": 1,
+        "2024-01-20": 1,
+        "2024-01-21": 1,
+        "2024-01-22": 1,
+        "2024-01-23": 1,
+        "2024-01-24": 1
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "2024-01-15",
+        "2024-01-16",
+        "2024-01-17",
+        "2024-01-18",
+        "2024-01-19"
+      ]
+    },
+    "ship_date": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 30,
+      "unique_percentage": 100.0,
+      "top_values": {
+        "2024-01-17": 1,
+        "2024-01-18": 1,
+        "2024-01-19": 1,
+        "2024-01-20": 1,
+        "2024-01-21": 1,
+        "2024-01-22": 1,
+        "2024-01-23": 1,
+        "2024-01-24": 1,
+        "2024-01-25": 1,
+        "2024-01-26": 1
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "2024-01-17",
+        "2024-01-18",
+        "2024-01-19",
+        "2024-01-20",
+        "2024-01-21"
+      ]
+    },
+    "region": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "unique_percentage": 13.333333333333334,
+      "top_values": {
+        "North": 8,
+        "West": 8,
+        "South": 7,
+        "East": 7
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "North",
+        "South",
+        "East",
+        "North",
+        "West"
+      ]
+    },
+    "sales_rep": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "unique_percentage": 13.333333333333334,
+      "top_values": {
+        "John Smith": 8,
+        "Emily Brown": 8,
+        "Sarah Johnson": 7,
+        "Mike Davis": 7
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "John Smith",
+        "Sarah Johnson",
+        "Mike Davis",
+        "John Smith",
+        "Emily Brown"
+      ]
+    },
+    "payment_method": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "unique_percentage": 6.666666666666667,
+      "top_values": {
+        "Credit Card": 17,
+        "Invoice": 13
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "Credit Card",
+        "Invoice",
+        "Credit Card",
+        "Invoice",
+        "Credit Card"
+      ]
+    },
+    "customer_segment": {
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "unique_percentage": 13.333333333333334,
+      "top_values": {
+        "Enterprise": 12,
+        "SMB": 7,
+        "Retail": 6,
+        "Startup": 5
+      },
+      "is_categorical": true,
+      "sample_values": [
+        "Enterprise",
+        "Enterprise",
+        "SMB",
+        "Enterprise",
+        "Startup"
+      ]
+    }
+  },
+  "data_quality": {
+    "overall_completeness": 100.0,
+    "columns_with_nulls": 0,
+    "total_null_cells": 0,
+    "duplicate_rows_count": 0,
+    "duplicate_rows_percentage": 0.0,
+    "quality_issues": []
+  },
+  "patterns": {
+    "order_id": {
+      "id_code": "30/30 matches"
+    },
+    "customer_id": {
+      "id_code": "30/30 matches"
+    },
+    "product_id": {
+      "id_code": "30/30 matches"
+    }
+  },
+  "correlations": {
+    "correlation_matrix": {
+      "quantity": {
+        "quantity": 1.0,
+        "unit_price": -0.6804632552173683,
+        "total_amount": 0.33868525629405827
+      },
+      "unit_price": {
+        "quantity": -0.6804632552173683,
+        "unit_price": 1.0,
+        "total_amount": 0.24999147107722958
+      },
+      "total_amount": {
+        "quantity": 0.33868525629405827,
+        "unit_price": 0.24999147107722958,
+        "total_amount": 1.0
+      }
+    },
+    "strong_correlations": []
+  }
+}

@@ -1,0 +1,891 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dictionary - sample_sales_data</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .metric {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        .column-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fafafa;
+        }
+        .column-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .column-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+        .column-type {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+        .column-description {
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .column-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .detail-item {
+            font-size: 0.9em;
+        }
+        .detail-label {
+            color: #666;
+            font-weight: 600;
+        }
+        .detail-value {
+            color: #333;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .badge-pii {
+            background: #ff6b6b;
+            color: white;
+        }
+        .badge-unique {
+            background: #51cf66;
+            color: white;
+        }
+        .badge-nullable {
+            background: #ffd43b;
+            color: #333;
+        }
+        .sample-values {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .quality-score {
+            font-size: 2em;
+            font-weight: bold;
+            color: #51cf66;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Data Dictionary</h1>
+        <p>sample_sales_data</p>
+        <p>Generated: 2025-12-01T20:58:55.838327</p>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Dataset containing 30 records across 15 fields</p>
+        <div class="overview-grid">
+            <div class="metric">
+                <div class="metric-label">Total Records</div>
+                <div class="metric-value">30</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Total Fields</div>
+                <div class="metric-value">15</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Dataset Size</div>
+                <div class="metric-value">0.02 MB</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Last Updated</div>
+                <div class="metric-value">2025-12-01</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Data Quality</h2>
+        <div class="overview-grid">
+            <div class="metric">
+                <div class="metric-label">Completeness</div>
+                <div class="metric-value">100.00%</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Quality Score</div>
+                <div class="quality-score">100% (Excellent)</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Duplicate Records</div>
+                <div class="metric-value">0</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Quality Issues</div>
+                <div class="metric-value">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Column Definitions</h2>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Order Number</div>
+                    <div style="font-size: 0.9em; color: #666;">order_id</div>
+                </div>
+                <div class="column-type">VARCHAR(6)</div>
+            </div>
+            
+            <div class="column-description">
+                Unique identifier for each sales transaction
+            </div>
+            
+            <div>
+                
+                <span class="badge badge-unique">UNIQUE</span>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">30</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Sales Operations Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> ORD001, ORD002, ORD003, ORD004, ORD005
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Customer Identifier</div>
+                    <div style="font-size: 0.9em; color: #666;">customer_id</div>
+                </div>
+                <div class="column-type">VARCHAR(8)</div>
+            </div>
+            
+            <div class="column-description">
+                Unique code assigned to each customer account
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">19</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Customer Success Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> CUST1001, CUST1002, CUST1003, CUST1001, CUST1004
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Customer Name</div>
+                    <div style="font-size: 0.9em; color: #666;">customer_name</div>
+                </div>
+                <div class="column-type">VARCHAR(18)</div>
+            </div>
+            
+            <div class="column-description">
+                Legal business name or individual name of the customer
+            </div>
+            
+            <div>
+                
+                
+                
+                <span class="badge badge-pii">⚠️ PII</span>
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">19</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Customer Success Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> Acme Corporation, Global Industries, Tech Solutions Inc, Acme Corporation, Startup Ventures
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Product Code</div>
+                    <div style="font-size: 0.9em; color: #666;">product_id</div>
+                </div>
+                <div class="column-type">VARCHAR(7)</div>
+            </div>
+            
+            <div class="column-description">
+                Unique identifier for each product in the catalog
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">8</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Product Management Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> PROD101, PROD102, PROD103, PROD104, PROD101
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Product Name</div>
+                    <div style="font-size: 0.9em; color: #666;">product_name</div>
+                </div>
+                <div class="column-type">VARCHAR(13)</div>
+            </div>
+            
+            <div class="column-description">
+                Marketing name or title of the product
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">8</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Product Management Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> Widget A, Widget B, Gadget X, Tool Pro, Widget A
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Product Category</div>
+                    <div style="font-size: 0.9em; color: #666;">category</div>
+                </div>
+                <div class="column-type">VARCHAR(11)</div>
+            </div>
+            
+            <div class="column-description">
+                High-level classification of products for inventory and reporting
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">4</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Product Management Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> Electronics, Electronics, Technology, Industrial, Electronics
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Order Quantity</div>
+                    <div style="font-size: 0.9em; color: #666;">quantity</div>
+                </div>
+                <div class="column-type">SMALLINT</div>
+            </div>
+            
+            <div class="column-description">
+                Number of units ordered in a single transaction
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">17</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Sales Operations Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> 5, 3, 10, 2, 1
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Unit Price</div>
+                    <div style="font-size: 0.9em; color: #666;">unit_price</div>
+                </div>
+                <div class="column-type">DECIMAL(18,2)</div>
+            </div>
+            
+            <div class="column-description">
+                Price per single unit of the product at time of sale
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">8</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Pricing Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> 299.99, 399.99, 149.99, 599.99, 299.99
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Total Order Value</div>
+                    <div style="font-size: 0.9em; color: #666;">total_amount</div>
+                </div>
+                <div class="column-type">DECIMAL(18,2)</div>
+            </div>
+            
+            <div class="column-description">
+                Total revenue from the order (quantity × unit price)
+            </div>
+            
+            <div>
+                
+                <span class="badge badge-unique">UNIQUE</span>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">30</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Finance Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> 1499.95, 1199.97, 1499.9, 1199.98, 299.99
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Order Date</div>
+                    <div style="font-size: 0.9em; color: #666;">order_date</div>
+                </div>
+                <div class="column-type">VARCHAR(10)</div>
+            </div>
+            
+            <div class="column-description">
+                Date when the customer placed the order
+            </div>
+            
+            <div>
+                
+                <span class="badge badge-unique">UNIQUE</span>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">30</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Sales Operations Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> 2024-01-15, 2024-01-16, 2024-01-17, 2024-01-18, 2024-01-19
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Ship Date</div>
+                    <div style="font-size: 0.9em; color: #666;">ship_date</div>
+                </div>
+                <div class="column-type">VARCHAR(10)</div>
+            </div>
+            
+            <div class="column-description">
+                Date when the order was shipped to the customer
+            </div>
+            
+            <div>
+                
+                <span class="badge badge-unique">UNIQUE</span>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">30</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Logistics Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> 2024-01-17, 2024-01-18, 2024-01-19, 2024-01-20, 2024-01-21
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Sales Region</div>
+                    <div style="font-size: 0.9em; color: #666;">region</div>
+                </div>
+                <div class="column-type">VARCHAR(5)</div>
+            </div>
+            
+            <div class="column-description">
+                Geographic territory where the sale occurred
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">4</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Sales Operations Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> North, South, East, North, West
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Sales Representative</div>
+                    <div style="font-size: 0.9em; color: #666;">sales_rep</div>
+                </div>
+                <div class="column-type">VARCHAR(13)</div>
+            </div>
+            
+            <div class="column-description">
+                Name of the account executive responsible for the sale
+            </div>
+            
+            <div>
+                
+                
+                
+                <span class="badge badge-pii">⚠️ PII</span>
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">4</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Sales Operations Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> John Smith, Sarah Johnson, Mike Davis, John Smith, Emily Brown
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Payment Method</div>
+                    <div style="font-size: 0.9em; color: #666;">payment_method</div>
+                </div>
+                <div class="column-type">VARCHAR(11)</div>
+            </div>
+            
+            <div class="column-description">
+                Method of payment used by the customer
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">2</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Finance Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> Credit Card, Invoice, Credit Card, Invoice, Credit Card
+            </div>
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <div>
+                    <div class="column-name">Customer Segment</div>
+                    <div style="font-size: 0.9em; color: #666;">customer_segment</div>
+                </div>
+                <div class="column-type">VARCHAR(10)</div>
+            </div>
+            
+            <div class="column-description">
+                Business classification of the customer for targeting and analysis
+            </div>
+            
+            <div>
+                
+                
+                
+            </div>
+            
+            <div class="column-details">
+                <div class="detail-item">
+                    <div class="detail-label">Null Rate</div>
+                    <div class="detail-value">0.00%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Unique Values</div>
+                    <div class="detail-value">4</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Owner</div>
+                    <div class="detail-value">Marketing Team</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="sample-values">
+                <strong>Sample Values:</strong> Enterprise, Enterprise, SMB, Enterprise, Startup
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <p>Generated by Automated Data Profiling System</p>
+        <p>For questions or updates, contact the data governance team</p>
+    </div>
+</body>
+</html>
+        
