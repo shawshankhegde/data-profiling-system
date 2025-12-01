@@ -1,8 +1,8 @@
 # Data Profiling System
 
 Python tool for profiling datasets and generating documentation. Helps teams understand data structure, quality, and business context.
-
-This tool was a side project I worked on while at Nokia, for automated data profiling and documentation generation. It Extracts metadata, maps business terms, identifies PII, and generates HTML/JSON/Markdown documentation.
+This tool was a side project I worked on during my time at Nokia as POC, for automated data profiling and documentation generation. 
+It Extracts metadata, maps business terms, identifies PII, and generates HTML/JSON/Markdown documentation.
 
 ## Features
 
